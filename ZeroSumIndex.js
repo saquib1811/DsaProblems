@@ -5,7 +5,7 @@ function zeroSumIndex(arr){
         return [-1,-1];
     }
     let l = 0;
-    let r = 0;
+    let r = arr.length -1;
     while (l < r){
         let sum = arr[l] + arr[r]
         if(sum == 0){
@@ -16,6 +16,7 @@ function zeroSumIndex(arr){
             r--;
         }
     }
+    return [-1,-1];
 }
 
-console.log([-3,-2,1,0-2,-4]);
+console.log(zeroSumIndex([-3,-2,1,0,2,3]));
